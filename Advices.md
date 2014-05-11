@@ -69,3 +69,15 @@ child = Person.new
 child.hello_protected
 child.hello_private
 ```
+
+### Procs and Lambdas
+one of differences between proc and lamda is that, if we define both with arguments when we call both proc will procceed and lambda will raise error 
+
+```ruby
+test = proc { |text| puts "#{text} --- proc" }
+test2 = lambda { |text| puts "#{text}  ---  lambda" }
+
+test.call() # this will work 
+test2.call() # this will raise error, expected argument
+
+```
