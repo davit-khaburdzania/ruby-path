@@ -71,7 +71,7 @@ child.hello_private
 ```
 
 ### Procs and Lambdas
-one of differences between proc and lamda is that, if we define both with arguments when we call both proc will procceed and lambda will raise error 
+one of differences between proc and lamda is that, if we define both with arguments, when we call both proc will proceed and lambda will raise error 
 
 ```ruby
 proc_test = proc { |text| puts "#{text} --- proc" }
