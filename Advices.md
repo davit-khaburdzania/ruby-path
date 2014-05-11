@@ -75,10 +75,22 @@ if we define both with arguments and call them,
 proc will proceed and lambda will raise error 
 
 ```ruby
+
 proc_test = proc { |text| puts "#{text} --- proc" }
 lambda_test = lambda { |text| puts "#{text}  ---  lambda" }
 
 proc_test.call() # this will work 
 lambda_test.call() # this will raise error, expected argument
+
+```
+
+if we return something within proc and lambda , lambda succeeds and proc will raise an error. thats because lambda always returns value.
+```ruby
+
+proc_test = proc { return "proc test" }
+lambda_test = lambda { return "lambda test" }
+
+puts lambda_test.call # this will work fine
+puts proc_test.call # this will raise error 
 
 ```
