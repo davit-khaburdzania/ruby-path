@@ -74,10 +74,10 @@ child.hello_private
 one of differences between proc and lamda is that, if we define both with arguments when we call both proc will procceed and lambda will raise error 
 
 ```ruby
-test = proc { |text| puts "#{text} --- proc" }
-test2 = lambda { |text| puts "#{text}  ---  lambda" }
+proc_test = proc { |text| puts "#{text} --- proc" }
+lambda_test = lambda { |text| puts "#{text}  ---  lambda" }
 
-test.call() # this will work 
-test2.call() # this will raise error, expected argument
+proc_test.call() # this will work 
+lambda_test.call() # this will raise error, expected argument
 
 ```
