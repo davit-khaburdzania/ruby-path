@@ -72,7 +72,7 @@ child.hello_private
 
 ### Differences between Procs and Lambdas
 if we define both with arguments and call them,
-proc will proceed and lambda will raise error 
+proc will proceed and lambda will raise error.
 
 ```ruby
 
@@ -84,13 +84,13 @@ lambda_test.call() # this will raise error, expected argument
 
 ```
 
-if we return anything with proc and lambda , lambda'll work fine but proc will raise an error. thats because lambda always returns value.
+if we return anything with proc and lambda , lambda'll work fine, but proc'll raise an error. thats because lambda always returns value and procs return doesn't refers to it's block, it refers to global context and in ruby we can't return anything in global context.
 ```ruby
 
 proc_test = proc { return "proc test" }
 lambda_test = lambda { return "lambda test" }
 
 puts lambda_test.call # this will work fine
-puts proc_test.call # this will raise error 
+puts proc_test.call # this will raise error , unexpected return
 
 ```
