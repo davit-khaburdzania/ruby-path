@@ -70,8 +70,8 @@ child.hello_protected
 child.hello_private
 ```
 
-### Procs and Lambdas
-one of differences between procs and lamdas is that, if we define both with arguments and call both,
+### Differences between Procs and Lambdas
+if we define both with arguments and call them,
 proc will proceed and lambda will raise error 
 
 ```ruby
