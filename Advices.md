@@ -84,7 +84,7 @@ lambda_test.call() # this will raise error, expected argument
 
 ```
 
-if we return something within proc and lambda , lambda succeeds and proc will raise an error. thats because lambda always returns value.
+if we return anything within proc and lambda , lambda succeeds and proc will raise an error. thats because lambda always returns value.
 ```ruby
 
 proc_test = proc { return "proc test" }
